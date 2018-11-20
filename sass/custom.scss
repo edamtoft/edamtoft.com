@@ -1,0 +1,32 @@
+// required imports
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+$body-bg: #EDDAB1;
+
+$theme-colors: (
+  "primary": #BC6600,
+  "secondary": #0055BC
+);
+
+$theme-colors: map-remove($theme-colors, "info", "danger", "warning", "successs");
+
+$enable-rounded: false;
+$enable-shadows: true;
+
+// Optional Imports
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+// @import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/utilities/shadows";
+@import "../node_modules/bootstrap/scss/utilities/background";
+@import "../node_modules/bootstrap/scss/utilities/sizing";
+@import "../node_modules/bootstrap/scss/utilities/spacing";
+@import "../node_modules/bootstrap/scss/utilities/text";
+@import "../node_modules/bootstrap/scss/utilities/float";
