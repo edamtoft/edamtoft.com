@@ -1,2 +1,10 @@
 title: Eric Damtoft
-source: "./site"
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - tsconfig.json
+  - webpack.config.json
+  - LISCENCE
+  - CNAME
+  - .gitignore

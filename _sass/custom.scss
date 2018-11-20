@@ -7,7 +7,9 @@ $body-bg: #EDDAB1;
 
 $theme-colors: (
   "primary": #BC6600,
-  "secondary": #0055BC
+  "secondary": #0055BC,
+  "dark": #222222,
+  "light": #ffffff
 );
 
 $theme-colors: map-remove($theme-colors, "info", "danger", "warning", "successs");

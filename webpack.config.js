@@ -2,10 +2,10 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    "index": "./js/index.ts"
+    "index": "./_js/index.ts"
   },
   output: {
-    path: path.resolve(__dirname, "site", "assets"),
+    path: path.resolve(__dirname, "assets"),
     filename: "[name].js"
   },
   resolve: {
