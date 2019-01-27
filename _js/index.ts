@@ -1,16 +1,18 @@
 import { key, message, encrypt } from "openpgp";
 
-let publicKeys = null;
-
-async function getPublicKeys() {
-  if (publicKeys != null) {
-    return publicKeys;
+// Lazy Loader
+const PublicKeys = { 
+  value: null, 
+  async getOrFetch() { 
+    if (this.value !== null) {
+      return this.value;
+    }
+    const res = await fetch("assets/publickey.eric@edamtoft.com.asc");
+    const asciiKey = await res.text();
+    const { keys } = await key.readArmored(asciiKey);
+    return this.value = keys;
   }
-  const res = await fetch("assets/publickey.eric@edamtoft.com.asc");
-  const asciiKey = await res.text();
-  const { keys } = await key.readArmored(asciiKey);
-  return publicKeys = keys;
-}
+};
 
 async function encryptMessage() {
   const textarea = document.getElementById("crypto-textarea") as HTMLTextAreaElement;
@@ -22,7 +24,7 @@ async function encryptMessage() {
 
   const options = {
     message: message.fromText(textarea.value),
-    publicKeys: await getPublicKeys(),
+    publicKeys: await PublicKeys.getOrFetch(),
   }
 
   const result = await encrypt(options);

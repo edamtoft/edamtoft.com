@@ -6,7 +6,8 @@
     "openpgp": "^4.2.1"
   },
   "scripts": {
-    "webpack": "webpack --mode production"
+    "webpack": "webpack --mode production",
+    "sass-build": "sass _sass/custom.scss:assets/theme.css"
   },
   "devDependencies": {
     "powershell": "^2.3.0",

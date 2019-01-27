@@ -1,40 +1,53 @@
 ---
 layout: default
+scripts:
+  - assets/index.js
 ---
-<div class="row">
-  <div class="col-md-6">
-    <div class="card shadow">
-      <div class="card-body">
-        <h2 class="h5 card-title">About Me</h2>
-        <p class="card-text">I'm a software engineer / architect working for <a href="https://www.dealeron.com">DealerOn</a>.
-          I enjoy working with web application architecture, distibuted systems, security and identity, and natural
-          language search.</p>
-          <div class="btn-group">
-            <a href="mail&#116;o&#58;%&#54;5%&#55;&#50;i&#99;&#64;e%64a&#37;&#54;&#68;to&#102;t%&#50;Ec%6Fm" class="btn btn-primary"
-              title="Email"><i class="fas fa-envelope"></i> Email</a>
-            <a href="assets/publickey.eric@edamtoft.com.asc" target="_blank" class="btn btn-secondary" title="PGP Public Key"><i
-                class="fas fa-key"></i></a>
-            <a href="https://github.com/edamtoft" target="_blank" class="btn btn-secondary" title="Github"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/eric-damtoft-6aab88171/" target="_blank" class="btn btn-secondary" title="LinkedIn"><i
-                class="fab fa-linkedin"></i></a>
+<div class="jumbotron" id="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card shadow">
+          <div class="card-body">
+            <h3 class="card-title"><i class="far fa-address-card"></i> Contact Info</h3>
+            <a href="mail&#116;o&#58;%&#54;5%&#55;&#50;i&#99;&#64;e%64a&#37;&#54;&#68;to&#102;t%&#50;Ec%6Fm" class="btn btn-primary btn-block"><i class="fas fa-envelope"></i> Email</a>
+            <a href="assets/publickey.eric@edamtoft.com.asc" target="_blank" class="btn btn-secondary btn-block"><i class="fas fa-key"></i> PGP Public Key</a>
+            <a href="{{site.links.github}}" target="_blank" class="btn btn-secondary btn-block"><i class="fab fa-github"></i> Github</a>
+            <a href="{{site.links.medium}}" target="_blank" class="btn btn-secondary btn-block"><i class="fab fa-medium"></i> Medium</a>
           </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="card shadow">
-      <div class="card-body">
-        <h2 class="h5 card-title">Secure Message</h2>
-        <p class="card-text">To send me a <a href="https://medium.freecodecamp.org/how-does-pretty-good-privacy-work-3f5f75ecea97"
-            target="_blank" alt="How Pretty Good Privacy works">secure message</a>, enter the text below and click
-          'encrypt'. Copy the
-          content
-          into a email and send it to me as plain text. All encryption is perfomed client-side.</p>
-        <p class="card-text"><textarea class="form-control" id="crypto-textarea" rows="5" placeholder="Secure Message"></textarea></p>
-        <button class="btn btn-primary" id="encrypt-button"><i class="fas fa-key"></i> Encrypt</button>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-<script src="assets/index.js" async></script>
+<div class="container mt-4">
+  <div class="row">
+    <section class="col-md-4">
+      <h4>About Me</h4>
+      <p>I'm a software engineer/architect working for <a href="{{site.links.dealeron}}" target="_blank">DealerOn</a>.
+        I specialize in working with .NET Core, docker, distibuted systems, identity, and
+        natural language search.</p>
+      <p>While not at work, I spend my time cycling, starting software projects I probably won't finish, 
+        pretending that my appartment is an enterprise network environment, and spend some evenings at 
+        Rockville Volunteer Fire Department as an EMT.</p>
+    </section>
+    <section class="col-md-4">
+      <h4>Articles</h4>
+      <p>See <a href="{{site.links.medium}}" target="_blank">Medium</a> for recent articles and posts.</p>
+      <h5>Highlights</h5>
+      <ul class="list-unstyled">
+        {% for post in site.mediumposts %}
+        <li><a href="{{post.url}}" target="_blank">{{post.title}}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section class="col-md-4">
+      <h4>Secure Message</h4>
+      <p>To send me a <a href="https://medium.freecodecamp.org/how-does-pretty-good-privacy-work-3f5f75ecea97" target="_blank"
+          alt="How Pretty Good Privacy works">secure message</a>, enter the text below and click
+        'Encrypt'. This will encrypt the message using my <a href="assets/publickey.eric@edamtoft.com.asc" target="_blank">public key</a>. You can then copy the encrypted content into a email. All encryption is perfomed client-side using open source tools.</p>
+      <p><textarea class="form-control" id="crypto-textarea" rows="5" placeholder="Secure Message"></textarea></p>
+      <button class="btn btn-primary" id="encrypt-button"><i class="fas fa-key"></i> Encrypt</button>
+    </section>
+  </div>
+</div>

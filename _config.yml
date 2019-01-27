@@ -1,4 +1,3 @@
-title: Eric Damtoft
 exclude:
   - node_modules
   - package.json
@@ -8,3 +7,11 @@ exclude:
   - LISCENCE
   - CNAME
   - .gitignore
+title: Eric Damtoft
+links:
+  medium: https://medium.com/@edamtoft
+  github: https://github.com/edamtoft
+  twitter: https://twitter.com/ericdamtoft
+mediumposts:
+  - url: https://medium.com/dealeron-dev/electron-and-xss-e9ecef1c7325
+    title: "Electron and XSS: How Small Bugs Escalate to Big Problems"
