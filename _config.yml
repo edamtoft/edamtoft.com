@@ -14,5 +14,14 @@ links:
   twitter: https://twitter.com/ericdamtoft
   dealeron: https://medium.com/dealeron-dev
 mediumposts:
+  - url: https://medium.com/swlh/food-trucks-and-async-programming-24906863a19f
+    title: "Food Trucks and Async Programming"
+  - url: https://medium.com/dealeron-dev/simple-cqrs-in-asp-net-core-5acfad1fb799
+    title: "Simple CQRS in ASP.NET Core"
+  - url: https://medium.com/dealeron-dev/how-to-write-readable-code-8434c58748a1
+    title: "How to Write Readable Code"
+  - url: https://medium.com/dealeron-dev/web-performance-saves-lives-b2ca19076651
+    title: "Web Performance Saves Lives"
   - url: https://medium.com/dealeron-dev/electron-and-xss-e9ecef1c7325
     title: "Electron and XSS: How Small Bugs Escalate to Big Problems"
+  

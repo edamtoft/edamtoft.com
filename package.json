@@ -6,15 +6,17 @@
     "openpgp": "^4.2.1"
   },
   "scripts": {
-    "webpack": "webpack --mode production",
-    "sass-build": "sass _sass/custom.scss:assets/theme.css"
+    "build": "npm run js-build && npm run sass-build",
+    "js-build": "webpack --mode production",
+    "sass-build": "sass -s compressed _sass/custom.scss:assets/theme.css"
   },
   "devDependencies": {
-    "powershell": "^2.3.0",
-    "ts-loader": "^5.3.0",
-    "typescript": "^3.1.6",
-    "webpack": "^4.26.0",
-    "webpack-cli": "^3.1.2"
+    "powershell": "^2.3.1",
+    "sass": "^1.25.0",
+    "ts-loader": "^5.4.5",
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   },
   "repository": {
     "type": "git",
